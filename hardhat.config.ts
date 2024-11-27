@@ -150,6 +150,12 @@ export default {
         mnemonic: 'casual vacant letter raw trend tool vacant opera buzz jaguar bridge myself',
       }, // ONLY LOCAL
     },
+    buildbear: {
+      url: process.env.BUILDBEAR_RPC_URL ?? '',
+      accounts: {
+        mnemonics: process.env.MNEMONIC ?? '',
+      },// ON BuildBear
+    },
     anvil: {
       url: process.env.ANVIL_RPC_URL ?? '',
       accounts: {

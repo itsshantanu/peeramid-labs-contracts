@@ -1,0 +1,43 @@
+name: Test My Action
+
+on:
+  push:
+    branches:
+      - bb-cd
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Install Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Setup Hardhat
+        run: npx hardhat compile
+
+      - name: bb_action_ci
+        uses: BuildBearLabs/buildbear_x_action@v1.3.0
+        with: 
+          network: |
+            [
+              {
+                "chainId": 59141
+              },
+              {
+                "chainId": 1,
+                "blockNumber": 10000
+              }
+            ]
+          deployCmd: "/playbook/utils/deploy-to-buildbear.sh"
+          buildbear_token: "BB"
