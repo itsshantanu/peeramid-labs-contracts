@@ -153,7 +153,7 @@ export default {
     buildbear: {
       url: process.env.BUILDBEAR_RPC_URL ?? '',
       accounts: {
-        mnemonics: process.env.MNEMONIC ?? '',
+        mnemonic: process.env.MNEMONIC ?? 'x',
       },// ON BuildBear
     },
     anvil: {
