@@ -28,9 +28,6 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Setup Hardhat
-        run: npx hardhat compile
-
       - name: bb_action_ci
         uses: BuildBearLabs/buildbear_x_action@v1.3.0
         with: 
