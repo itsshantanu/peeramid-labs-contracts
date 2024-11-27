@@ -41,5 +41,5 @@ jobs:
                 "blockNumber": 10000
               }
             ]
-          deploy-command: "/playbook/utils/deploy-to-buildbear.sh"
+          deploy-command: "bash playbook/utils/deploy-to-buildbear.sh"
           buildbear-token: "BB"
