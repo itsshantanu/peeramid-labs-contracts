@@ -155,9 +155,10 @@ export default {
       accounts: {
         mnemonic: process.env.MNEMONIC ?? 'x',
       },// ON BuildBear
-      gas: 30000000,               // Set a higher gas limit
-      gasPrice: "auto",            // Let BuildBear determine the gas price
-      blockGasLimit: 30000000,     // Increase block gas limit
+      gas: 30000000,
+      gasPrice: 10000000000,  // 10 gwei (in wei)
+      blockGasLimit: 30000000,
+      timeout: 60000,
     },
     anvil: {
       url: process.env.ANVIL_RPC_URL ?? '',
