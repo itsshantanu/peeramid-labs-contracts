@@ -155,8 +155,6 @@ export default {
       accounts: {
         mnemonic: process.env.MNEMONIC ?? 'x',
       },// ON BuildBear
-      gas: 30000000,
-      gasPrice: 10000000000,  // 10 gwei (in wei)
       blockGasLimit: 30000000,
       timeout: 60000,
     },
