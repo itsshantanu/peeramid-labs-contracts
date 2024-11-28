@@ -98,10 +98,10 @@ export default {
     deployer: {
       hardhat: '0xF52E5dF676f51E410c456CC34360cA6F27959420',
       anvil: '0x6Cf8d74C7875de8C2FfB09228F4bf2A21b25e583',
-      default: '0xF52E5dF676f51E410c456CC34360cA6F27959420', //TODO this must be set for networks
+      default: 0, //TODO this must be set for networks
     },
     owner: {
-      default: '0x520E00225C4a43B6c55474Db44a4a44199b4c3eE',
+      default: 0,
       anvil: '0x507c2d32185667156de5B4C440FEEf3800078bDb',
     },
     registrar: {
@@ -155,8 +155,6 @@ export default {
       accounts: {
         mnemonic: process.env.MNEMONIC ?? 'x',
       },// ON BuildBear
-      blockGasLimit: 30000000,
-      timeout: 60000,
     },
     anvil: {
       url: process.env.ANVIL_RPC_URL ?? '',
